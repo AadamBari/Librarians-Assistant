@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Librarians Assistant</string>
+    <string name="menu">Main Menu</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_list_books">Results</string>
+    <string name="title_activity_add_book">Add Book</string>
+    <string name="title_activity_edition">Edition</string>
+</resources>
