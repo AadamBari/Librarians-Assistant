@@ -8,7 +8,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Search for a Book"
+        android:text="List All The Books"
         android:id="@+id/searchButton"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"

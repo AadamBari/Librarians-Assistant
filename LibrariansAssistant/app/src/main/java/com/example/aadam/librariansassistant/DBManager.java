@@ -83,7 +83,7 @@ public class DBManager
         DBHelper.close();
     }
 
-    // Sample insert method.
+    //insert
     //column values sent as parameters from calling activity
     public long insertTask(String bName, String aName, String aID, String copies)
     {
@@ -100,7 +100,7 @@ public class DBManager
     }
 
 
-    // Sample method for querying database
+    // method for querying database (unused)
     public Cursor getBook(String query)
     {
 
@@ -116,6 +116,40 @@ public class DBManager
 
     }
 
+
+    public Cursor deleteBook(String query)
+    {
+
+        Cursor mCursor = db.rawQuery(
+
+                "DELETE FROM Books WHERE _id = " + "'" + query + "';", null);
+
+        if (mCursor != null) {
+            mCursor.moveToFirst();
+        }
+
+        return mCursor;
+
+    }
+
+    public Cursor updateBook(String bookID, String newValue)
+    {
+
+        Cursor mCursor = db.rawQuery(
+
+                "UPDATE Books " +
+                        "SET copies = " + "'" + newValue + "' " +
+                        "WHERE _id = " + "'" + bookID + "';", null);
+
+        if (mCursor != null) {
+            mCursor.moveToFirst();
+        }
+
+        return mCursor;
+
+    }
+
+    //Return all the books for the ListBooks activity
     public Cursor getAll()
     {
         Cursor mCursor = db.rawQuery(

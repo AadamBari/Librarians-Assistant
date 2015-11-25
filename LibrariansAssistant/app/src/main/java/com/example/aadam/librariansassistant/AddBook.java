@@ -40,6 +40,9 @@ public class AddBook extends AppCompatActivity {
             db.insertTask(bookName.getText().toString(), authorName.getText().toString(), authorID.getText().toString(), copies.getText().toString());
             db.close();
 
+            Toast toast = Toast.makeText(this, "Book Added", Toast.LENGTH_SHORT);
+            toast.show();
+
         } catch (Exception ex) {
             Context context = getApplicationContext();
             CharSequence text = "Error opening database";
@@ -49,11 +52,10 @@ public class AddBook extends AppCompatActivity {
             toast.show();
         }
 
-        Toast toast = Toast.makeText(this, "Book Added", Toast.LENGTH_SHORT);
-        toast.show();
 
         Intent i = new Intent(this, ListBooks.class);
         startActivity(i);
+        finish();
 
     }
 

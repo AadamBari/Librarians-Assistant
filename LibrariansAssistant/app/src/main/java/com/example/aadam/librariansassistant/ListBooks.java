@@ -57,10 +57,19 @@ public class ListBooks extends AppCompatActivity {
                         String bookId = myCursor.getString(0);
                         String bookName = myCursor.getString(1);
                         String bookAuthor = myCursor.getString(3);
+                        String copies = myCursor.getString(4);
                         Toast.makeText(ListBooks.this, bookName +" by "+ bookAuthor, Toast.LENGTH_SHORT).show();
 
-                        //Intent i = new Intent(ListBooks.this, Edition.class);
-                        //startActivity(i);
+                        Intent j = new Intent(ListBooks.this, Edition.class);
+
+                        //messages to been sent over (the data of clicked row)
+                        j.putExtra("idMessage", bookId);
+                        j.putExtra("nameMessage", bookName);
+                        j.putExtra("authorMessage", bookAuthor);
+                        j.putExtra("copiesMessage", copies);
+                        startActivity(j);
+
+                        finish();
 
                     }
                 }
