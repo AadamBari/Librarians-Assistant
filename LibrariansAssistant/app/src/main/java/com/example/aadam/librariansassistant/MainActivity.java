@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             //db.insertTask("The Art of War", "Sun Tzu", "800", "2");
             //db.insertTask("A Clockwork Orange", "Anthony Burgess", "405", "5");
             //db.insertTask("The Hunger Games", "Suzanne Collins", "650", "3");
-            db.insertTask("A Memory of Light", "Robert Jordan", "150", "0");
+            //db.insertTask("A Memory of Light", "Robert Jordan", "150", "0");
 
             db.close();
 
