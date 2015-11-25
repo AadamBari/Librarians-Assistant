@@ -4,8 +4,7 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_weight="1"
-        android:layout_width="fill_parent"
+        android:layout_width="33dp"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
@@ -24,8 +23,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_weight="1"
-        android:layout_width="fill_parent"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
@@ -44,9 +42,8 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_weight="1"
         android:orientation="vertical"
-        android:layout_width="fill_parent"
+        android:layout_width="112dp"
         android:layout_height="wrap_content">
 
         <TextView
@@ -64,9 +61,8 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_weight="1"
         android:orientation="vertical"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TextView
@@ -76,10 +72,10 @@
             android:text="Copies" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/copies"
-            android:text="number" />
+            android:text="no" />
 
 
     </LinearLayout>

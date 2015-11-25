@@ -25,12 +25,15 @@ public class MainActivity extends AppCompatActivity {
             //instantiate database
             db.open();
             //initial values
-            //db.insertTask("The Da Vinci Code", "Dan Brown", "500", "1");
-            //db.insertTask("Legend", "David Gemmell", "300", "3");
-            //db.insertTask("The Art of War", "Sun Tzu", "800", "2");
-            //db.insertTask("A Clockwork Orange", "Anthony Burgess", "405", "5");
-            //db.insertTask("The Hunger Games", "Suzanne Collins", "650", "3");
-            //db.insertTask("A Memory of Light", "Robert Jordan", "150", "0");
+            /*
+            db.insertTask("The Da Vinci Code", "Dan Brown", "500", "1");
+            db.insertTask("Legend", "David Gemmell", "300", "3");
+            db.insertTask("The Art of War", "Sun Tzu", "800", "2");
+            db.insertTask("A Clockwork Orange", "Anthony Burgess", "405", "5");
+            db.insertTask("The Hunger Games", "Suzanne Collins", "650", "3");
+            db.insertTask("A Memory of Light", "Robert Jordan", "150", "0");
+            db.insertTask("The Hobbit", "JRR Tolkien", "923", "6");
+            */
 
             db.close();
 

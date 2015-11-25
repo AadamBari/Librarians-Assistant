@@ -1,6 +1,8 @@
 package com.example.aadam.librariansassistant;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -57,13 +59,30 @@ public class Edition extends AppCompatActivity {
 
         try {
 
-            //instantiate database
-            db.open();
-            db.deleteBook(theBookID);
-            db.close();
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage(R.string.delete_message);
 
-            Toast toast = Toast.makeText(this, theBookName + " has been deleted", Toast.LENGTH_SHORT);
-            toast.show();
+            builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    // User clicked OK button
+                    //instantiate database
+                    db.open();
+                    db.deleteBook(theBookID);
+                    db.close();
+
+                    Toast toast = Toast.makeText(Edition.this, theBookName + " has been deleted", Toast.LENGTH_SHORT);
+                    toast.show();
+
+                }
+            });
+            builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    // User cancelled the dialog
+                }
+            });
+
+            AlertDialog dialog = builder.create();
+            dialog.show();
 
         } catch (Exception ex) {
             Context context = getApplicationContext();
@@ -80,30 +99,53 @@ public class Edition extends AppCompatActivity {
 
         try {
 
-            //convert noOfCopies to int, decrement than  reverse
-            int temp = Integer.parseInt(noOfCopies);
+            //create dialog box to confirm user wants to reserve
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage(R.string.reserve_message);
 
-            if (temp > 0)
-            {
+            builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    // User clicked OK button
 
-                temp--; //decrement
-                noOfCopies = Integer.toString(temp);
+                    //convert noOfCopies to int
+                    int temp = Integer.parseInt(noOfCopies);
 
-                //instantiate database
-                db.open();
-                db.updateBook(theBookID, noOfCopies);
-                db.close();
+                    //if copies available
+                    if (temp > 0)
+                    {
 
-                Toast toast = Toast.makeText(this, theBookName +" has been reserved", Toast.LENGTH_SHORT);
-                toast.show();
+                        temp--; //decrement
+                        noOfCopies = Integer.toString(temp);
 
-            }
-            else
-            {
-                Toast toast = Toast.makeText(this, theBookName +" is not available", Toast.LENGTH_SHORT);
-                toast.show();
+                        //instantiate database
+                        db.open();
+                        db.updateBook(theBookID, noOfCopies);
+                        db.close();
 
-            }
+                        Toast toast = Toast.makeText(Edition.this, theBookName +" has been reserved", Toast.LENGTH_SHORT);
+                        toast.show();
+
+                    }
+                    else
+                    {
+                        Toast toast = Toast.makeText(Edition.this, theBookName +" is not available", Toast.LENGTH_SHORT);
+                        toast.show();
+
+                    }
+
+
+                }
+            }); //end positive button
+            builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    // User cancelled the dialog
+                }
+            }); //end negative button
+
+            //create the dialog box
+            AlertDialog dialog = builder.create();
+            //show the dialog box
+            dialog.show();
 
 
         } catch (Exception ex) {

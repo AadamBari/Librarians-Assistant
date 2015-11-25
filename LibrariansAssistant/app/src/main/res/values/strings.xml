@@ -7,4 +7,9 @@
     <string name="title_activity_list_books">Results</string>
     <string name="title_activity_add_book">Add Book</string>
     <string name="title_activity_edition">Options</string>
+    <string name="delete_message">Are you sure you would like to delete this book?</string>
+    <string name="reserve_message">Are you sure you would like to reserve this book?</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+
 </resources>
