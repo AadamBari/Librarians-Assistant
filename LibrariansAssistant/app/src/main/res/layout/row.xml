@@ -18,7 +18,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/book_id"
-            android:text="_id_" />
+            android:text="_id_"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -37,7 +38,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/book_name"
-            android:text="book" />
+            android:text="book"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -55,7 +57,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/author"
-            android:text="someBook" />
+            android:text="someBook"
+            android:textStyle="bold" />
 
 
     </LinearLayout>
@@ -75,7 +78,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/copies"
-            android:text="no" />
+            android:text="no"
+            android:textStyle="bold" />
 
 
     </LinearLayout>
