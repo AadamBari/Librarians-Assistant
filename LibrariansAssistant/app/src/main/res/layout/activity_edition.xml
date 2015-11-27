@@ -57,10 +57,13 @@
         android:layout_below="@+id/authorText"
         android:layout_centerHorizontal="true" />
 
-    <ImageView
-        android:layout_width="125dp"
-        android:layout_height="200dp"
-        android:id="@+id/bookView"
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buy Book Online"
+        android:id="@+id/webButton"
+        android:layout_marginBottom="93dp"
+        android:onClick="onClickWeb"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 

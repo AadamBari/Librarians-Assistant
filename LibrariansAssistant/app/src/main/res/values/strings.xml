@@ -11,5 +11,6 @@
     <string name="reserve_message">Are you sure you would like to reserve this book?</string>
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
+    <string name="title_activity_web">Web Activity</string>
 
 </resources>

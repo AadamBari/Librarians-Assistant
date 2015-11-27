@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.aadam.librariansassistant" >
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/book_stack"
@@ -27,6 +29,10 @@
         <activity
             android:name=".Edition"
             android:label="@string/title_activity_edition" >
+        </activity>
+        <activity
+            android:name=".WebActivity"
+            android:label="@string/title_activity_web" >
         </activity>
     </application>
 

@@ -159,6 +159,15 @@ public class Edition extends AppCompatActivity {
 
     }
 
+    public void onClickWeb(View view)
+    {
+
+        Intent i = new Intent(this, WebActivity.class);
+
+        startActivity(i);
+
+    }
+
     //Return to main menu
     public void onClickMainMenu(View view){
 
